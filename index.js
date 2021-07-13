@@ -109,7 +109,7 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(){
   /*add your code here*/
 }
 
@@ -135,9 +135,27 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if (computer <= 0.33){
+  computer = 'rock';
+} else if (computer <= 0.66){
+  computer = 'paper';
+} else {
+  computer = 'scissors'
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer){
+    return `it's a tie`;
+  } else if (user === 'rock' && computer === 'scissors'){
+    return `you win!`;
+  } else if (user === 'paper' && computer === 'rock'){
+    return `you win!`;
+  } else if (user ==='scissors' && computer === 'paper'){
+    return 'you win!';
+  } else {
+    return 'you lose!';
+  }
 }
 
 
@@ -188,7 +206,7 @@ function annoyingSong(number){
     return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`;
   }
 }
-console.log('task 6', annoyingSong(99));
+// console.log('task 6', annoyingSong(99));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
